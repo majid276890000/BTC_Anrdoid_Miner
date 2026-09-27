@@ -1,6 +1,6 @@
 name: Build APK v2
 
-on:
+"on":
   push:
     branches:
       - main
