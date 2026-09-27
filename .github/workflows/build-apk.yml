@@ -21,7 +21,7 @@ jobs:
           java-version: '17'
 
       - name: Install glslang
-          run: sudo apt-get update && sudo apt-get install -y glslang-tools
+        run: sudo apt-get update && sudo apt-get install -y glslang-tools
       - name: Make Gradle executable
         run: chmod +x gradlew
 
