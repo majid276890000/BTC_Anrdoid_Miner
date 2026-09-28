@@ -719,33 +719,33 @@ class MainActivity : AppCompatActivity() {
         binding.buttonStopMining.setOnClickListener { onStopMiningClicked() }
 
         supportFragmentManager.registerFragmentLifecycleCallbacks(dashboardFragmentCallbacks, true)
-//        binding.dashboardPager.adapter = MainPagerAdapter(this)
-//        val dashboardPageCount = binding.dashboardPager.adapter!!.itemCount
-//        dashboardTabMediator = TabLayoutMediator(
-//            binding.dashboardPageIndicator,
-//            binding.dashboardPager,
-//        ) { tab, position ->
-//            tab.text = ""
-//            tab.contentDescription = getString(
-//                R.string.dashboard_page_indicator_a11y,
-//                position + 1,
-//                dashboardPageCount,
-//            )
+        binding.dashboardPager.adapter = MainPagerAdapter(this)
+        val dashboardPageCount = binding.dashboardPager.adapter!!.itemCount
+        dashboardTabMediator = TabLayoutMediator(
+            binding.dashboardPageIndicator,
+            binding.dashboardPager,
+        ) { tab, position ->
+            tab.text = ""
+            tab.contentDescription = getString(
+                R.string.dashboard_page_indicator_a11y,
+                position + 1,
+                dashboardPageCount,
+            )
         }.also { it.attach() }
-//        binding.chartPager.adapter = ChartPagerAdapter(this)
-//        val chartPageCount = binding.chartPager.adapter!!.itemCount
-//        chartTabMediator = TabLayoutMediator(
-//            binding.chartPageIndicator,
-//            binding.chartPager,
-//        ) { tab, position ->
-//            tab.text = ""
-//            tab.contentDescription = getString(
-//                R.string.chart_page_indicator_a11y,
-//                position + 1,
-//                chartPageCount,
-//            )
+        binding.chartPager.adapter = ChartPagerAdapter(this)
+        val chartPageCount = binding.chartPager.adapter!!.itemCount
+        chartTabMediator = TabLayoutMediator(
+            binding.chartPageIndicator,
+            binding.chartPager,
+        ) { tab, position ->
+            tab.text = ""
+            tab.contentDescription = getString(
+                R.string.chart_page_indicator_a11y,
+                position + 1,
+                chartPageCount,
+            )
         }.also { it.attach() }
-//        binding.chartPager.setCurrentItem(0, false)
+        binding.chartPager.setCurrentItem(0, false)
 
         binding.digitalRainGlView.onGpuInitFailedListener = {
             DigitalRainPreferences(this).setRenderBackend(DigitalRainRenderBackend.CANVAS_CPU)
