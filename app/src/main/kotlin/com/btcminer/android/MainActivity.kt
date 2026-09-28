@@ -718,7 +718,7 @@ class MainActivity : AppCompatActivity() {
         binding.buttonStartMining.setOnClickListener { onStartMiningClicked() }
         binding.buttonStopMining.setOnClickListener { onStopMiningClicked() }
 
-        // supportFragmentManager.registerFragmentLifecycleCallbacks(dashboardFragmentCallbacks, true)
+        supportFragmentManager.registerFragmentLifecycleCallbacks(dashboardFragmentCallbacks, true)
         // // binding.dashboardPager.adapter = MainPagerAdapter(this)
         // val dashboardPageCount = binding.dashboardPager.adapter!!.itemCount
         // dashboardTabMediator = TabLayoutMediator(
