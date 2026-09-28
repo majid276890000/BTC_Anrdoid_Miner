@@ -757,7 +757,7 @@ class MainActivity : AppCompatActivity() {
 
         // applyDigitalRainSettings()
 
-        binding.dashboardHeaderRow.viewTreeObserver.addOnGlobalLayoutListener(dashboardHeaderGlobalLayoutListener)
+        // binding.dashboardHeaderRow.viewTreeObserver.addOnGlobalLayoutListener(dashboardHeaderGlobalLayoutListener)
 
         // Initialize lastBitcoinAddress to detect changes when returning from Config
         lastBitcoinAddress = configRepository.getConfig().bitcoinAddress.trim()
