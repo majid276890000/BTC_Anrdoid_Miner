@@ -755,7 +755,7 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, R.string.digital_rain_gpu_fallback, Toast.LENGTH_LONG).show()
         }
 
-        applyDigitalRainSettings()
+        // applyDigitalRainSettings()
 
         binding.dashboardHeaderRow.viewTreeObserver.addOnGlobalLayoutListener(dashboardHeaderGlobalLayoutListener)
 
@@ -797,7 +797,7 @@ class MainActivity : AppCompatActivity() {
             binding.digitalRainGlView.onResume()
             glViewPaused = false
         }
-        applyDigitalRainSettings()
+        // applyDigitalRainSettings()
         val useF = configRepository.getConfig().batteryTempFahrenheit
         if (lastThermalDisplayFahrenheit != null && lastThermalDisplayFahrenheit != useF) {
             updateThermalChartUi()
