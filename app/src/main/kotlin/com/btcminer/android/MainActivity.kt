@@ -732,20 +732,20 @@ class MainActivity : AppCompatActivity() {
                 // dashboardPageCount,
             // )
         // }.also { it.attach() }
-        binding.chartPager.adapter = ChartPagerAdapter(this)
-        val chartPageCount = binding.chartPager.adapter!!.itemCount
-        chartTabMediator = TabLayoutMediator(
-            binding.chartPageIndicator,
-            binding.chartPager,
-        ) { tab, position ->
-            tab.text = ""
-            tab.contentDescription = getString(
-                R.string.chart_page_indicator_a11y,
-                position + 1,
-                chartPageCount,
-            )
-        }.also { it.attach() }
-        binding.chartPager.setCurrentItem(0, false)
+        // binding.chartPager.adapter = ChartPagerAdapter(this)
+        // val chartPageCount = binding.chartPager.adapter!!.itemCount
+        // chartTabMediator = TabLayoutMediator(
+            // binding.chartPageIndicator,
+            // binding.chartPager,
+        // ) { tab, position ->
+            // tab.text = ""
+            // tab.contentDescription = getString(
+                // R.string.chart_page_indicator_a11y,
+                // position + 1,
+                // chartPageCount,
+            // )
+        // }.also { it.attach() }
+        // binding.chartPager.setCurrentItem(0, false)
 
         binding.digitalRainGlView.onGpuInitFailedListener = {
             DigitalRainPreferences(this).setRenderBackend(DigitalRainRenderBackend.CANVAS_CPU)
