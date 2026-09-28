@@ -710,6 +710,7 @@ class MainActivity : AppCompatActivity() {
             if (phase2Ok) "Validate: SHA-256 OK" else "Validate: SHA-256 FAIL",
             Toast.LENGTH_SHORT
         ).show()
+        Toast.makeText(this, "DEBUG: after SHA-256", Toast.LENGTH_LONG).show()
 
         binding.buttonConfig.setOnClickListener {
             startActivity(Intent(this, ConfigHubActivity::class.java))
