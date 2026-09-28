@@ -9,7 +9,7 @@ android {
     ndkVersion = "25.1.8937393"
 
     defaultConfig {
-        applicationId = "com.btcminer.android"
+        applicationId = "com.btcminer.android.debug"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
