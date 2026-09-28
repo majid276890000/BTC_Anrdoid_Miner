@@ -5,13 +5,13 @@ plugins {
 
 android {
     namespace = "com.btcminer.android"
-    compileSdk = 34
+    compileSdk = 36
     ndkVersion = "25.1.8937393"
 
     defaultConfig {
         applicationId = "com.btcminer.android"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0.0"
         externalNativeBuild {
